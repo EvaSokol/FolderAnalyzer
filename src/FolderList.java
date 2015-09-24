@@ -12,10 +12,12 @@ public class FolderList {
     public void getFileList(String path) {
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
+        String str;
         for (File cur_file : listOfFiles) {
-            System.out.println(cur_file.getName());
-            System.out.println(cur_file.getName().split(".").length);
-//            System.out.println(cur_file.getName().split(".")[1]);
+            str = cur_file.getName();
+            System.out.println(str);
+            System.out.println(str.toCharArray().length);
+            System.out.println(str.split("\\.")[0]);
         }
     }
 
